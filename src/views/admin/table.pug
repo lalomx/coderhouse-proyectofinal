@@ -1,0 +1,29 @@
+extends ../layouts/page.pug
+block title
+  h2 #{title}
+block pageContent
+  if add
+    a(href=`${add}`)
+      button.uk-margin-remove.uk-button.uk-button-secondary.uk-button-small.uk-margin-top Agregar nuevo
+    table.uk-table.uk-table-divider.uk-margin-top
+      thead
+        tr
+          th Nombre
+          th Plataforma
+          th Descripcion
+          th Precio
+      tbody
+        if products.length
+          each p in products
+            tr
+              td #{p.name}
+              td #{p.platform}
+              td #{p.description}
+              td $#{p.price}
+        else 
+          tr 
+            td No hay productos
+
+
+      
+      

@@ -1,0 +1,24 @@
+extends layouts/index.pug
+block form
+  h1 Compra videojuegos en linea
+  p Hola!, bienvenido a la tienda de videojuegos.
+  p Login
+  form.uk-form-stacked(action='/login' method='POST')
+    fieldset.uk-fieldset
+      legend.uk-legend Enter your credentials
+      
+      include includes/form_errors.pug
+      
+      .uk-margin
+        label.uk-form-label(for='email') Email
+        .uk-form-controls
+          input.uk-input(type='text' name='email')
+      .uk-margin
+        label.uk-form-label(for='email') Password
+        .uk-form-controls
+          input.uk-input(type='password' name='pwd')
+      .uk-margin
+        button.uk-button.uk-button-primary(type='submit') Login
+      a.uk-link(href='/register') Registrate
+block scripts
+  script(src="/static/js/index.js")

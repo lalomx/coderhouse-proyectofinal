@@ -1,0 +1,23 @@
+extends layouts/page.pug
+block title
+  h2 Elige sabiamente
+block pageContent
+  div(id="products" class='uk-child-width-1-4@m' uk-grid='')
+    //- if products.length
+    //-     each p in products
+    //-       div
+    //-         .uk-card.uk-card-default
+    //-           .uk-card-media-top
+    //-             img(src=`/static/img/${p.img}` width='1800' height='1200' alt='')
+    //-           .uk-card-body
+    //-             h3.uk-card-title #{p.name}
+    //-             h5 MXN $#{p.price}
+    //-             span.uk-badge #{p.platform}
+    //-             p #{p.description}
+    //-             button.uk-button.uk-button-secondary.uk-button-small(onclick=`addToCart('${cartId}', '${p.id}')`) Agregar al carrito
+    //- else 
+    //-   p No hay productos
+    
+block scripts
+  script(src="/static/js/general.js")
+  script(src="/static/js/home.js")

@@ -1,0 +1,23 @@
+extends ../layouts/page.pug
+block title
+  h2 Administracion
+block pageContent
+  div.uk-margin-top(class='uk-grid-collapse uk-child-width-expand@s uk-text-center uk-margin-large-top' uk-grid='')
+    div
+      .uk-card.uk-card-default.uk-card-body(class='uk-width-1-1')
+        .uk-card-badge.uk-label #{numPedidos}
+        h3.uk-card-title Pedidos
+        a(href="/admin/pedidos") ver más
+    div
+      .uk-card.uk-card-default.uk-card-body(class='uk-width-1-1')
+        .uk-card-badge.uk-label #{numUsers}
+        h3.uk-card-title Usuarios
+        a(href="/admin/users") ver más
+    div
+      .uk-card.uk-card-default.uk-card-body(class='uk-width-1-1')
+        .uk-card-badge.uk-label #{numProducts}
+        h3.uk-card-title Productos
+        a(href="/admin/products") ver más
+
+      
+      

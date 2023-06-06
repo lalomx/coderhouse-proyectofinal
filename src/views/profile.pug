@@ -1,0 +1,14 @@
+extends layouts/page.pug
+block title
+  h2 Elige sabiamente
+block pageContent
+  form
+  .uk-margin(uk-margin='')
+    div(uk-form-custom='target: true')
+      input(type='file')
+      input.uk-input.uk-form-width-medium(type='text' placeholder='Select file' disabled='')
+    button.uk-button.uk-button-default Submit
+    
+block scripts
+  script(src="/static/js/general.js")
+  script(src="/static/js/home.js")

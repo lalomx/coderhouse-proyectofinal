@@ -1,0 +1,31 @@
+extends ../layouts/page.pug
+block title
+  h2 Agregar nuevo producto
+block pageContent
+  div.uk-margin-top
+    form.uk-form-stacked(action='/admin/add/product', method="POST")
+      .uk-margin
+        label.uk-form-label(for='form-stacked-text') Nombre
+        .uk-form-controls
+          input#form-stacked-nombre.uk-input(type='text' name='name')
+      .uk-margin
+        label.uk-form-label(for='form-stacked-select') Plataforma
+        .uk-form-controls
+          select#form-stacked-plataforma.uk-select(name='platform')
+            option PS4
+            option Xbox
+            option Nintendo
+      .uk-margin
+        label.uk-form-label(for='form-stacked-text') Precio
+        .uk-form-controls
+          input#form-stacked-precio.uk-input(type='number' name='price')
+      .uk-margin
+        label.uk-form-label(for='form-stacked-text') Description
+        .uk-form-controls
+          textarea#form-stacked-description.uk-textarea(rows='5' name='description')
+      
+      button.uk-button.uk-button-secondary.uk-button-small.uk-margin-top(type='submit') Agregar
+
+
+      
+      

@@ -1,0 +1,32 @@
+extends layouts/index.pug
+block form
+  h1 Tienda de videojuegos
+  form.uk-form-stacked(action='/register' method='POST')
+    fieldset.uk-fieldset
+      legend.uk-legend Register
+      
+      include includes/form_errors.pug
+      
+      .uk-margin
+        label.uk-form-label(for='email') Email
+        .uk-form-controls
+          input.uk-input(type='text' name='email')
+      .uk-margin
+        label.uk-form-label(for='fname') Firstname
+        .uk-form-controls
+          input.uk-input(type='text' name='fname')
+      .uk-margin
+        label.uk-form-label(for='lname') Lastname
+        .uk-form-controls
+          input.uk-input(type='text' name='lname')
+      .uk-margin
+        label.uk-form-label(for='pwd') Password
+        .uk-form-controls
+          input.uk-input(type='password' name='pwd' placeholder='')
+      .uk-margin
+        button.uk-button.uk-button-primary(type='submit') Submit
+      
+      a.uk-link(href='/login') Ya tienes cuenta?
+
+block scripts
+  script(src="/static/js/index.js")

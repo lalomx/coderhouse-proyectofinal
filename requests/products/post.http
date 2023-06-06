@@ -1,0 +1,9 @@
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Ghost of Tsushima",
+  "platform": "PS4",
+  "price": "3000",
+  "description": "Juego de samurais"
+}

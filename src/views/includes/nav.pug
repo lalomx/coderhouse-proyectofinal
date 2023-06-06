@@ -1,0 +1,21 @@
+nav#navbar.uk-navbar-container(uk-navbar='')
+  .uk-navbar-left
+    ul.uk-navbar-nav
+      li.uk-active
+        a(href='/') Home
+      li
+        a(href='/carrito') Carrito
+          span#cart-badge.uk-label 0
+      li
+        a(href='/chat') Chat
+      li
+        a(href='#') Cuenta
+        .uk-navbar-dropdown
+          ul.uk-nav.uk-navbar-dropdown-nav
+            li
+              a(href='#') Perfil
+            li
+              a(href='/admin') Admin
+            li
+              a(href='/logout') Logout
+      
