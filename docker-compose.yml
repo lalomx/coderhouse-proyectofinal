@@ -1,0 +1,8 @@
+version: "3.2"
+services:
+  ecommerce:
+    image: lalomx/ecommerce-ch:latest
+    env_file:
+      - .env
+    ports:
+     - 4000:4000

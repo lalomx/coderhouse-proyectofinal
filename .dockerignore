@@ -1,0 +1,13 @@
+.gitignore
+.vscode
+README.mx
+.nvmrc
+LICENSE
+test
+requests
+client
+node_modules
+nginx.conf
+Dockerfile
+docker-compose.yml
+.env
