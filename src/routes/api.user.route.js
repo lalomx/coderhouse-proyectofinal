@@ -8,10 +8,10 @@ const userModel = ModelFactory.getModel('user')
 const router = new Router()
 
 router.get('/', async (req, res) => {
-  console.log(userModel)
+  // console.log(userModel)
   const users = await userModel.getAll()
   // TODO: agregar pedidos a usuario
-  console.log(users)
+  // console.log(users)
   res.send(users)
 })
 
@@ -23,6 +23,8 @@ router.get('/current', async (req, res) => {
   const userId = req.session.passport.user
   const user = await userModel.getById(userId)
   const cart = await cartModel.getByUser(userId)
+
+  console.log(user, cart)
 
   return res.send({
     ...user,

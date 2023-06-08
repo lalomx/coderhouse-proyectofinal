@@ -48,7 +48,7 @@ function Home() {
   const addProduct = (e) => {
     e.preventDefault()
 
-    console.log(newProduct)
+    // console.log(newProduct)
     // POST Request
     axios.post(URL, newProduct)
       .then(({ data }) => {

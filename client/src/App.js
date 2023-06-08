@@ -5,7 +5,7 @@ function App() {
   const [products, setProducts] = useState([])
 
   const getProducts = () => {
-    console.log('getProducts')
+    // console.log('getProducts')
     // return [{ name: 1 }]
     axios.post("http://localhost:8080/graphql", {
       query: `

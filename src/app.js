@@ -33,7 +33,7 @@ module.exports = (async () => {
   const io = new Server(server)
 
   const PORT = process.env.PORT || 8080
-  console.log(MONGO_URI)
+  // console.log(MONGO_URI)
   try {
     await mongoose.connect(MONGO_URI)
 

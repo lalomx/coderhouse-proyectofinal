@@ -14,10 +14,10 @@ module.exports = (req, res, next) => {
 
   const token = header.split(' ')[1]
 
-  console.log(token)
+  // console.log(token)
 
   if (!verifyToken(token)) {
-    console.log('no valid token')
+    // console.log('no valid token')
     return res.status(401).send({
       error: 'unauthorized',
     })

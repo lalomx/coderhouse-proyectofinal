@@ -12,7 +12,7 @@ const groupList = document.getElementById("group-list")
 const user = JSON.parse(localStorage.getItem("user"))
 const username = `${user.firstname} ${user.lastname}`
 
-console.log(user)
+// console.log(user)
 const users = []
 
 // Utilizamos el modal de UI para iniciar 
@@ -43,7 +43,7 @@ function init () {
   user.socket.on("message", render)
 
   user.socket.on("messages", (data) => {
-    console.log(data)
+    // console.log(data)
 
 
     data.forEach(m => render(m))

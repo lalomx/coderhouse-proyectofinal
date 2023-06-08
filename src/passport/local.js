@@ -38,9 +38,9 @@ module.exports = (passport) => {
         password: password,
       })
 
-      const cart = await cartModel.save({ userId: user._id })
+      const cart = await cartModel.save({ userId: user.id.toString() })
 
-      console.log(user)
+      // console.log(user, cart)
 
       // enviar email de nuevo registro
       // mailSender.newUserMail(user)
@@ -73,6 +73,7 @@ module.exports = (passport) => {
   passport.deserializeUser(async (id, done) =>
     {
       const user = await userModel.getById(id)
+      // console.log('deserializar user')
       done(null, user)
     }
     

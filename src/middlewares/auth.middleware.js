@@ -1,6 +1,6 @@
 module.exports = (req, res, next) => {
   if (req.isAuthenticated()) {
-    console.log(req.session)
+    // console.log(req.session)
     return next()
   }
 

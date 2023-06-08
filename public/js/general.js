@@ -13,7 +13,7 @@ async function updateCartBadge() {
 
 async function addToCart(productId) {
   const user = JSON.parse(localStorage.getItem("user"))
-  console.log(user)
+  // console.log(user)
   const res = await fetch(`/api/cart/${user.cartId}/${productId}`, { method: 'POST' })
 
   if (res.status != 200) {
